@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pratica_basico_n1/two_page.dart';
 
+import 'widgets/custom_button_widget.dart';
+
 class OnePage extends StatelessWidget {
   const OnePage({super.key});
 
@@ -8,11 +10,10 @@ class OnePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.of(context).pushNamed('/TwoPage');
-          },
-          child: const Text('Ir Para a Segunda Pagina'),
+        child: CustomButtonWidget(
+          onPressed: () {},
+          title: 'Botão Customizado',
+          disable: false,
         ),
       ),
     );
